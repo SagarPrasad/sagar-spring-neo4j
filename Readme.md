@@ -1,10 +1,8 @@
-Hubway cycle trip data import into Neo4j using Spring Data Neo4j
+Disclamer : Taken the base code from Hubway cycle example
 
-!! Modeling
+This example consists of 
+Neo4j using Spring Data Neo4j
+=============================
 
-    (Bike)<-[:bike]-(Trip)-[:member]->(Member)
-    (Station)<-[:start]-(Trip)-[:end]->(Station)
-
-!! Source
-
-http://hubwaydatachallenge.org/trip-history-data/
+More details to come
+--------------------
