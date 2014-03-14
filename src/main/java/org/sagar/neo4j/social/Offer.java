@@ -3,6 +3,7 @@
  */
 package org.sagar.neo4j.social;
 
+import java.util.Set;
 import org.neo4j.graphdb.Direction;
 import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.neo4j.annotation.Indexed;
@@ -24,11 +25,11 @@ public class Offer extends AbstractEntity {
 	
 	@RelatedToVia(type = "ADD", direction = Direction.INCOMING)
 	private
-	Iterable<Add> add;
+	Set<Add> add;
 	
 	@RelatedToVia(type = "REDEEM", direction = Direction.INCOMING)
 	private
-	Iterable<Redeem> redeem;
+	Set<Redeem> redeem;
 	
 	protected Offer(){
 	}
@@ -46,19 +47,19 @@ public class Offer extends AbstractEntity {
 		return offerTitle;
 	}
 
-	public Iterable<Add> getAdd() {
+	public Set<Add> getAdd() {
 		return add;
 	}
 
-	public void setAdd(Iterable<Add> add) {
+	public void setAdd(Set<Add> add) {
 		this.add = add;
 	}
 
-	public Iterable<Redeem> getRedeem() {
+	public Set<Redeem> getRedeem() {
 		return redeem;
 	}
 
-	public void setRedeem(Iterable<Redeem> redeem) {
+	public void setRedeem(Set<Redeem> redeem) {
 		this.redeem = redeem;
 	}
 
