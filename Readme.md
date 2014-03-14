@@ -23,4 +23,8 @@ MATCH (a)-[:`FRIENDS`]-(b)-[:`REDEEM`|:`ADD` ]->(c)<-[:`REDEEM`|:`ADD`]-(a) WHER
 Still adding lable thru code is not available and will be released in later versions.
 
 
+The data is loaded on cloud - 
 
+http://socialcontext.sb01.stations.graphenedb.com:24789/
+
+(https://beta.graphenedb.com)
