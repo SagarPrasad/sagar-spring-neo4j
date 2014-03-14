@@ -16,6 +16,7 @@
 package org.sagar.neo4j;
 
 import org.neo4j.graphdb.GraphDatabaseService;
+import org.neo4j.graphdb.factory.GraphDatabaseFactory;
 import org.neo4j.kernel.EmbeddedGraphDatabase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -33,6 +34,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 class ApplicationConfig {
 	@Bean(destroyMethod = "shutdown")
 	public GraphDatabaseService graphDatabaseService() {
-		return new EmbeddedGraphDatabase("target/graph.db");
+		//return new EmbeddedGraphDatabase("target/graph.db");
+		return new GraphDatabaseFactory().newEmbeddedDatabase( "target/graph.db" );
 	}
 }
